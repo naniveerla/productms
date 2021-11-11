@@ -15,7 +15,6 @@
 	<description> project for E_Kart</description>
 	<properties>
 		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.4</spring-cloud.version>
 		<sonar.organization>naniveerla</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
@@ -82,12 +81,15 @@
 	</dependencyManagement>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.sonar</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>2.5.6</version>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
 
 </project>
